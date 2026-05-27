@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDS Hacks | Princeton Day School Hack Club</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Space+Grotesk:wght@400;600;700&display=swap" rel="family">
+    <style>
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .faq-item {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        .faq-question {
+            padding: 20px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1.1rem;
+            user-select: none;
+        }
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: #ec3750;
+            transition: transform 0.2s ease;
+        }
+        .faq-item.active .faq-question::after {
+            transform: rotate(45deg);
+        }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+            padding: 0 30px;
+            color: #9ca3af;
+        }
+        .faq-item.active .faq-answer {
+            padding-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div style="display: flex; align-items: center; gap: 10px;">
+            <div class="logo">PDS <span>Hacks</span></div>
+            <img src="https://resources.finalsite.net/images/t_image_size_4/v1676506056/princetonday/ncybgiq5ymbdvyfyocaq/PDSCrest20221.png" style="height: 35px; width: auto;">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li>
+                  <a href="https://hack.club/join/KTJYLK" class="btn-nav">Join Club</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <div class="badge">🚀 Part of the Hack Club Network</div>
+            <h1>Code. Build. <span>Innovate.</span></h1>
+            <p>Welcome to Princeton Day School's premier coding, engineering, and building club. Whether you're experienced or just a beginner, you belong here.</p>
+            <div class="hero-buttons">
+                <a href="#join" class="btn-primary">Get Started</a>
+                <a href="#events" class="btn-secondary">View Schedule</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <h2>What We Do</h2>
+        <div class="grid">
+            <div class="card">
+                <div class="card-icon">💻</div>
+                <h3>Weekly Workshops</h3>
+                <p>Learn everything from HTML/CSS and Python to game development and AI basics in our hands-on sessions.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">🛠️</div>
+                <h3>Build Projects</h3>
+                <p>Don't just watch tutorials. Work in teams to build real websites, apps, and games that solve real-world problems. For every workshop and project we complete as a club, we are rewarded with many prizes inclduing hardware, food, and much more.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">🏆</div>
+                <h3>Hackathons</h3>
+                <p>Get access to exclusive Hack Club grants, hardware, and compete in local or global high school hackathons.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="events" class="events">
+        <h2>Upcoming Events</h2>
+        <div class="timeline">
+            <div class="event-item">
+                <div class="event-date">Oct 14</div>
+                <div class="event-details">
+                    <h3>Club Kickoff & Intro to Git</h3>
+                    <p>Meet the team, grab some stickers, and set up your GitHub profile.</p>
+                </div>
+            </div>
+            <div class="event-item">
+                <div class="event-date">Nov 02</div>
+                <div class="event-details">
+                    <h3>PDS Mini-Hackathon 2026</h3>
+                    <p>A 12-hour sprint to build the most creative solution to a secret prompt. Prizes included!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="about">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-container">
+            <div class="faq-item">
+                <div class="faq-question">Who can join PDS Hacks?</div>
+                <div class="faq-answer">
+                    <p>Absolutely anyone! Whether you've never written a line of code or you build apps in your free time, our workshops are designed to accommodate all skill levels.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">When and where do we meet?</div>
+                <div class="faq-answer">
+                    <p>We meet every Tuesday during US community time in the Upper School tech lab.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Do I need to bring anything?</div>
+                <div class="faq-answer">
+                    <p>Just bring your school laptop and your creativity! We provide everything else, including software tools, hardware parts, and snacks.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="join" class="join">
+        <div class="join-container">
+            <h2>Ready to start building?</h2>
+            <p>No prior coding experience required. We meet on days 5/7 during US community time in the CS Lab or nearby rooms (just schoology for info).</p>
+            <form class="join-form" onsubmit="event.preventDefault(); alert('Welcome to PDS Hacks! Check your email soon.');">
+                <input type="email" placeholder="Enter your PDS email" required>
+                <button type="submit" class="btn-primary">Join the Mailing List</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 PDS Hacks. Built with &lt;/&gt; by PDS students.</p>
+        <p>An official chapter of the global <a href="https://hackclub.com" target="_blank">Hack Club</a> community.</p>
+    </footer>
+
+    <script> // had to use AI to help me with this part as I didn't know what to do, rest i did from my own research, cheat sheet + web 
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const faqItem = button.parentElement;
+                const answer = faqItem.querySelector('.faq-answer');
+                
+                faqItem.classList.toggle('active');
+                
+                if (faqItem.classList.contains('active')) {
+                    answer.style.maxHeight = answer.scrollHeight + "px";
+                } else {
+                    answer.style.maxHeight = 0;
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
